@@ -1,16 +1,20 @@
 package navegador;
 
-import aparelho.IPhone;
 
-public class Safari{
-   
-    public static void main(String[] args) {
-        IPhone iphone = new IPhone();
-
-        iphone.exibirPagina();
-        iphone.adicionarNovaAba();
-        iphone.atualizarPagina();
+public class Safari implements Navegador{
     
+    @Override
+    public void exibirPagina(){
+        System.out.println("Exibindo pagina!");
     }
 
+    @Override
+    public void adicionarNovaAba(){
+        System.out.println("Adicionar nova aba.");
+    }
+
+    @Override
+    public void atualizarPagina(){
+        System.out.println("Atualizando a pagina!");
+    }
 }

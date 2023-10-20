@@ -1,15 +1,20 @@
 package aparelhotelefonico;
 
-import aparelho.IPhone;
 
-public class Contato {
-    public static void main(String[] args) {
-        IPhone iphone = new IPhone();
+public class Contato implements AparelhoTelefonico{
+    @Override
+    public void ligar(){
+        System.out.println("Ligando!");
+    }
 
-        iphone.ligar();
-        iphone.atender();
-        iphone.iniciarCorreioDeVoz();
-    
+    @Override
+    public void atender(){
+        System.out.println("Atendendo ligacao!");
+    }
+
+    @Override
+    public void iniciarCorreioDeVoz(){
+        System.out.println("Iniciando correio de voz!");
     }
     
 }

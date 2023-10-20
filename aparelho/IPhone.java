@@ -1,54 +1,39 @@
 package aparelho;
 
-import aparelhotelefonico.AparelhoTelefonico;
-import navegador.Navegador;
-import reprodutormusical.ReprodutorMusical;
+import java.util.Scanner;
 
-public class IPhone implements ReprodutorMusical, AparelhoTelefonico, Navegador{
+import aparelhotelefonico.Contato;
+import navegador.Safari;
+import reprodutormusical.IPod;
 
-    @Override
-    public void tocarMusica(){
-        System.out.println("Tocando musica!");
+public class IPhone{
+    public static void main(String[] args) {
+        Contato contato = new Contato();
+        IPod ipod = new IPod();
+        Safari safari = new Safari();
+       
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escolha o aplicativo que deseja usar\n 1: Contato\n 2: Safari\n 3:IPod.");
+        int entrada = sc.nextInt();
+
+        if(entrada == 1){
+            contato.ligar();
+            contato.atender();
+            contato.iniciarCorreioDeVoz();
+         }else if(entrada == 2){
+            safari.exibirPagina();
+            safari.adicionarNovaAba();
+            safari.atualizarPagina();
+         }else if(entrada== 3){
+            ipod.tocarMusica();
+            ipod.selecionarMusica();
+            ipod.pausarMusica();
+         }else{
+            System.out.println("Operacao invalida.");
+         }
+
     }
-
-    @Override
-    public void pausarMusica(){
-        System.out.println("Pausando musica.");
-    }
-
-    @Override
-    public void selecionarMusica(){
-        System.out.println("Selecionando musica.");
-    }
-
-    @Override
-    public void ligar(){
-        System.out.println("Ligando!");
-    }
-
-    @Override
-    public void atender(){
-        System.out.println("Atendendo ligacao!");
-    }
-
-    @Override
-    public void iniciarCorreioDeVoz(){
-        System.out.println("Iniciando correio de voz!");
-    }
-
-    @Override
-    public void exibirPagina(){
-        System.out.println("Exibindo pagina!");
-    }
-
-    @Override
-    public void adicionarNovaAba(){
-        System.out.println("Adicionar nova aba.");
-    }
-
-    @Override
-    public void atualizarPagina(){
-        System.out.println("Atualizando a pagina!");
-    }
+    
 }
+
     
