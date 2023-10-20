@@ -1,4 +1,4 @@
-package navegador;
+package src.navegador;
 
 
 public class Safari implements Navegador{

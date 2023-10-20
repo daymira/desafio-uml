@@ -1,4 +1,4 @@
-package aparelhotelefonico;
+package src.aparelhotelefonico;
 
 
 public class Contato implements AparelhoTelefonico{

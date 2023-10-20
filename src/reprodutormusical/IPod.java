@@ -1,4 +1,4 @@
-package reprodutormusical;
+package src.reprodutormusical;
 
 
 public  class IPod implements ReprodutorMusical{ 

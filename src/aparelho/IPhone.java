@@ -1,10 +1,10 @@
-package aparelho;
+package src.aparelho;
 
 import java.util.Scanner;
 
-import aparelhotelefonico.Contato;
-import navegador.Safari;
-import reprodutormusical.IPod;
+import src.aparelhotelefonico.Contato;
+import src.navegador.Safari;
+import src.reprodutormusical.IPod;
 
 public class IPhone{
     public static void main(String[] args) {
@@ -31,6 +31,7 @@ public class IPhone{
          }else{
             System.out.println("Operacao invalida.");
          }
+         sc.close();
 
     }
     

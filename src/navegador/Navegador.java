@@ -1,4 +1,4 @@
-package navegador;
+package src.navegador;
 
 public interface Navegador {
     public void exibirPagina();
